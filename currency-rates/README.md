@@ -47,6 +47,16 @@ The *PythonAnywhere* Cloud service provides a scheduling similar to a `cron` job
     * |__`/supply.py`
         * The API runs the same processes as the local version (`get_rates.py` and `utils.py`), wich in turn are managed by the service scheduler. This file defines the Flask app and it's enpoint route, as well as the procedures to be run depending on the request parameters.
 
+## Handling the Data
+
+### Grafana Dashboard
+Simple dashboard ingesting data from the Flask API. Updates daily.
+![Grafana dashboard](../readme-imgs/currency-rates/grafana-dashboard.png)
+
+### JSON
+Requests can carry an additional parameter, which allow filtering by currency symbol (date filtering is not implemented). If this parameter is omitted, all symbols are provided.
+![Unfiltered JSON response](../readme-imgs/currency-rates/standard-json-response.png)
+
 ## Requirements
 It's recommended to not install required packages globally, but locally under a project subfolder using `venv`: 
 ```
