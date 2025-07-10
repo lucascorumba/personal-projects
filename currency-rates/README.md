@@ -50,12 +50,16 @@ The *PythonAnywhere* Cloud service provides a scheduling similar to a `cron` job
 ## Handling the Data
 
 ### Grafana Dashboard
-Simple dashboard ingesting data from the Flask API. Updates daily.
+Simple dashboard ingesting data from the Flask API. Updates BRL-USD prices daily.
 ![Grafana dashboard](../readme-imgs/currency-rates/grafana-dashboard.png)
 
 ### JSON
 Requests can carry an additional parameter, which allow filtering by currency symbol (date filtering is not implemented). If this parameter is omitted, all symbols are provided.
+
 ![Unfiltered JSON response](../readme-imgs/currency-rates/standard-json-response.png)
+
+
+<img src="../readme-imgs/currency-rates/standard-json-response.png" alt="Unfiltered JSON response" width="150" heigth="300"/>
 
 ## Requirements
 It's recommended to not install required packages globally, but locally under a project subfolder using `venv`: 
