@@ -56,9 +56,6 @@ Simple dashboard ingesting data from the Flask API. Updates BRL-USD prices daily
 ### JSON
 Requests can carry an additional parameter, which allow filtering by currency symbol (date filtering is not implemented). If this parameter is omitted, all symbols are provided.
 
-![Unfiltered JSON response](../readme-imgs/currency-rates/standard-json-response.png)
-
-
 <img src="../readme-imgs/currency-rates/standard-json-response.png" alt="Unfiltered JSON response" width="150" heigth="300"/>
 
 ## Requirements
