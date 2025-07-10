@@ -1,5 +1,7 @@
 # Currency Rates Fetcher
-ETL pipeline to fetch, store and display currency rates. It works both locally and on the cloud provided by [PythonAnywhere](pythonanywhere.com).
+ETL pipeline developed to automate the aquisition, processing, storage and continuous availability of currency exchange rates.
+
+This process can work both locally and on the cloud, being deployed on [PythonAnywhere](pythonanywhere.com).
 
 Makes use of the [exchangerates API](https://exchangeratesapi.io/) as data source and uses python's built-in module `sqlite3` to create and connect to a simple [SQLite3](https://www.sqlite.org/docs.html) database.
 [Flask](https://flask.palletsprojects.com/en/stable/) was used to create the API, wich was set up to serve as data source for vizualization tools.
@@ -7,15 +9,13 @@ Makes use of the [exchangerates API](https://exchangeratesapi.io/) as data sourc
 Setting up this API enabled easy access of work-ready data for both on-premise tools (PowerBI in this project) as well as web applications such as Grafana.
 The *PythonAnywhere* Cloud service provides a scheduling similar to a `cron` job. This automated daily routine for ingestion ensures the data is always up to date.
 
-*Check the API documentation [here](https://exchangeratesapi.io/documentation/).*
-
-*Check the `sqlite3` module documentation [here](https://docs.python.org/3/library/sqlite3.html)*
-
-*[Flask docs](https://flask.palletsprojects.com/en/stable/quickstart/)*
-
-*[PythonAnywhere cloud](https://help.pythonanywhere.com/pages/)*
-
-*[Grafana Cloud docs](https://grafana.com/docs/grafana/latest/)*
+## Overview
+* **Data source**: [ExchangerateAPI](https://exchangeratesapi.io/documentation/)
+* **Database**: SQLite3  via *[`sqlite3` python module]*(https://docs.python.org/3/library/sqlite3.html)
+* **API**: [Flask](https://flask.palletsprojects.com/en/stable/quickstart/)
+* **Visualization**: PowerBI and [Grafana Cloud](https://grafana.com/docs/grafana/latest/)
+* **Execution**: Locally and cloud (via [PythonAnywhere cloud](https://help.pythonanywhere.com/pages/))
+* **Refreshing**: `cron` style locally and via PythonAnywhere service.
 
 ## About the Scripts
 * `get_rates.py`
