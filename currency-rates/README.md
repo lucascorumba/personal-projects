@@ -56,7 +56,8 @@ Simple dashboard ingesting data from the Flask API. Updates BRL-USD prices daily
 ### JSON
 Requests can carry an additional parameter, which allow filtering by currency symbol (date filtering is not implemented). If this parameter is omitted, all symbols are provided.
 
-<img src="../readme-imgs/currency-rates/standard-json-response.png" alt="Unfiltered JSON response" width="150" heigth="300"/>
+<img src="../readme-imgs/currency-rates/standard-json-response.png" alt="unfiltered JSON response" width="150" heigth="300"/>
+<img src="../readme-imgs/currency-rates/filtered-json-response.png" alt="filtered JSON response" width="150" heigth="300"/>
 
 ## Requirements
 It's recommended to not install required packages globally, but locally under a project subfolder using `venv`: 
